@@ -1,29 +1,46 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import amavii from './images/amavii.png';
+import blackLimba from './images/black-limba-logo-f5.png';
+import bonParfumeur from './images/bon-parfumeur.png';
+import bonsoirs from './images/bonsoirs.png';
 import dashboard from './images/dealwithgrowth-dashboard-header.jpg';
 import logo2 from './images/dealwithgrowth.com.dark.png';
 import logo from './images/dealwithgrowth.com.light.png';
+import feel from './images/feel-logo-compressor.png';
+import fifthOrigins from './images/fifth-orignis-1024x82.png';
 import jeremy from './images/jeremy.jpg';
+import dashboard2 from './images/klaviyo-dashboard-compressor.png';
 import klaviyo from './images/klaviyo_white_logo.png';
+import oceanBottle from './images/ocean-bottle.png';
+import rondorff from './images/ron-dorff_logo.png';
 import shopify from './images/shopify-partner-crop.png';
+import skinspace from './images/skinspace-logo-f5.png';
 import spain from './images/spain-flag.svg';
+import spoke from './images/spoke-logo.png';
+import usa from './images/usa-flag.svg';
 
 const purple = '#525fc4';
 const ourGray = '#1d2d35';
+const lightGray = '#f5f5f5';
+const footerGray = '#171727';
+const white = '#fff';
+const paddBott = '100px';
 
 const headerStyles = css`
   display: flex;
   color: ${ourGray};
-  padding-top: 10px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-left: 10px;
+  padding-top: 49px;
+  padding-left: 18px;
+  padding-right: 20px;
+  padding-bottom: ${paddBott};
 
   p {
     margin-right: auto;
     padding: 0px 30px;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    line-height: 1rem;
   }
 
   img {
@@ -90,10 +107,23 @@ const headerStyles = css`
   }
 `;
 
+const headerFlagStyle = css`
+  display: inline !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: 1em !important;
+  width: 1em !important;
+  margin: 0 0.07em !important;
+  vertical-align: -0.1em !important;
+  background: none !important;
+  padding: 0 !important;
+`;
+
 const sectionStyles1 = css`
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 80px;
+  padding-bottom: ${paddBott};
 
   h1 {
     color: ${ourGray};
@@ -124,6 +154,8 @@ const sectionStyles1 = css`
     font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
     font-size: 1.5rem;
     display: flex;
+    margin-block-start: 0;
+    margin-block-end: 0;
   }
 
   button {
@@ -140,6 +172,7 @@ const sectionStyles1 = css`
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    cursor: pointer;
   }
 
   a {
@@ -151,6 +184,7 @@ const sectionStyles1 = css`
     font-weight: 700;
     letter-spacing: 2px;
     padding: 0;
+    cursor: pointer;
   }
 `;
 
@@ -167,30 +201,22 @@ const btnLinkStyles = css`
   flex-direction: row;
 `;
 
-const grayBackground = css`
-  background-color: #f5f5f5;
-  content: '';
-  height: 150%;
-  transform: skewY(-5deg);
-  position: absolute;
-  top: -240px;
-  width: 100%;
-  z-index: -1;
-`;
-
 const sectionStyles2 = css`
-  margin-right: auto;
-  margin-left: auto;
+  padding-right: auto;
+  padding-left: auto;
+  background-color: ${lightGray};
+  padding-bottom: ${paddBott};
 
   h2 {
-    font-family: 'Merriweather', 'Helvtica', 'Arial', serif;
+    font-family: 'Merriweather', 'Helvetica', 'Arial', serif;
     color: ${ourGray};
     text-align: center;
     font-size: 2rem;
     letter-spacing: -0.75px;
     font-weight: 700;
     line-height: 1.3;
-    margin-top: 100px;
+    margin-block-start: 0;
+    margin-block-end: 0;
   }
 
   p {
@@ -201,29 +227,35 @@ const sectionStyles2 = css`
     font-size: 1.3rem;
     font-weight: 400;
     font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
+    margin-block-start: 0;
+    margin-block-end: 0;
   }
 `;
 
 const sectionStyles3 = css`
-  max-width: 760px;
-  margin-right: auto;
-  margin-left: auto;
-
-  img {
+  background-color: ${lightGray};
+  width: 100% img {
     width: 233px;
     height: auto;
     border-radius: 10px;
+    padding-bottom: ${paddBott};
   }
 
   h2 {
-    font-family: 'Merriweather', 'Helvtica', 'Arial', serif;
+    font-family: 'Merriweather', 'Helvetica', 'Arial', serif;
     color: ${ourGray};
     text-align: center;
     font-size: 2rem;
     letter-spacing: -0.75px;
     font-weight: 700;
     line-height: 1.3;
-    margin-top: 100px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  p {
+    margin-block-start: 0;
+    margin-block-end: 0;
   }
 
   p,
@@ -245,19 +277,35 @@ const gridSection3 = css`
   height: auto;
 `;
 
+const divSection3 = css`
+  max-width: 760px;
+  margin-right: auto;
+  margin-left: auto;
+
+  img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-left: auto;
+  }
+`;
+
 const sectionStyles4 = css`
+  background-color: ${lightGray};
+  padding-bottom: ${paddBott};
   h2 {
     max-width: 760px;
     margin-right: auto;
     margin-left: auto;
-    font-family: 'Merriweather', 'Helvtica', 'Arial', serif;
+    font-family: 'Merriweather', 'Helvetica', 'Arial', serif;
     color: ${ourGray};
     text-align: center;
     font-size: 2rem;
     letter-spacing: -0.75px;
     font-weight: 700;
     line-height: 1.3;
-    margin-top: 100px;
+    margin-block-start: 0;
+    margin-block-end: 0;
   }
 `;
 
@@ -270,7 +318,7 @@ const gridSection4 = css`
 
 const elementOfGrid4 = css`
   h3 {
-    font-family: 'Merriweather', 'Helvtica', 'Arial', serif;
+    font-family: 'Merriweather', 'Helvetica', 'Arial', serif;
     color: ${ourGray};
     text-align: center;
     font-size: 1.5rem;
@@ -283,6 +331,11 @@ const elementOfGrid4 = css`
     font-size: 1.3rem;
     font-weight: 400;
     font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
+    max-width: 760px;
+    margin: 30px 30px 28px;
+    padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
   }
 
   button {
@@ -298,9 +351,231 @@ const elementOfGrid4 = css`
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    width: 40%;
-    margin-left: 30%;
-    margin-right: 30%;
+    width: auto;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+  }
+`;
+
+const sectionStyles5 = css`
+  background-color: ${lightGray};
+  padding-bottom: ${paddBott};
+  h2 {
+    max-width: 760px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'Merriweather', 'Helvetica', 'Arial', serif;
+    color: ${ourGray};
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: -0.75px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  p {
+    display: flex;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+`;
+
+const ctaLink5 = css`
+  color: ${ourGray};
+  padding-top: 40px;
+  border-bottom: 2px solid ${purple};
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 0;
+  cursor: pointer;
+  font-family: 'PT Sans', sans-serif;
+  line-height: 1;
+  margin: auto;
+
+  :hover {
+    color: ${purple};
+  }
+`;
+
+const logosStyles5 = css`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  list-style: none;
+  margin-left: 0px;
+
+  img {
+    height: 20px;
+    width: auto;
+  }
+`;
+
+const sectionStyles6 = css`
+  padding-right: auto;
+  padding-left: auto;
+  background-color: ${lightGray};
+  padding-bottom: ${paddBott};
+
+  h2 {
+    font-family: 'Merriweather', 'Helvetica', 'Arial', serif;
+    color: ${ourGray};
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: -0.75px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  p {
+    max-width: 760px;
+    color: ${ourGray};
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+`;
+
+const sectionStyles7 = css`
+  padding-bottom: ${paddBott};
+  h2 {
+    font-family: 'Merriweather', 'Helvetica', 'Arial', serif;
+    color: ${ourGray};
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: -0.75px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  p {
+    width: 90%;
+    color: ${ourGray};
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
+    text-align: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  button {
+    border-radius: 10px;
+    border: none;
+    background-color: ${purple};
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1;
+    padding: 20px 30px 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: auto;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+  }
+`;
+
+const sectionStyles8 = css`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 3rem 0 0;
+  background: ${footerGray};
+  color: ${white};
+  padding-left: 50px;
+
+  h3 {
+    font-family: 'Merriweather', 'Helvetica', 'Arial', serif;
+    text-align: left;
+    font-size: 1.1rem;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  p,
+  li {
+    color: ${white};
+    opacity: 0.5;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
+    text-align: left;
+    text-decoration: none;
+    line-height: 1.2rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    height: 23px;
+    width: auto;
+  }
+`;
+
+const setLogos8 = css`
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding-bottom: ${paddBott};
+`;
+
+const intAnchors8 = css`
+  color: ${white};
+  opacity: 0.5;
+`;
+
+const footerStyles = css`
+  border-top: 0.7px solid rgba(255, 255, 255, 0.5);
+  padding: 0.6rem 0 0.7rem 0;
+  background: ${footerGray};
+  text-align: center;
+  color: ${white};
+  font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
+
+  p {
+    opacity: 0.5;
+    font-size: 0.75rem;
+  }
+
+  img {
+    display: inline !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 1em !important;
+    width: 1em !important;
+    margin: 0 0.07em !important;
+    vertical-align: -0.1em !important;
+    background: none !important;
+    padding: 0 !important;
   }
 `;
 
@@ -310,7 +585,9 @@ function App() {
       <div
         css={css`
           background: #fff;
-          margin: 20px;
+          margin: 0;
+          padding: 0;
+          z-index: -1;
         `}
       >
         <header css={headerStyles}>
@@ -332,9 +609,9 @@ function App() {
             <span>Get in touch</span>
           </a>
 
-          <ul>
-            <li />
-          </ul>
+          <p>
+            <img src={usa} alt="usa" css={headerFlagStyle} />
+          </p>
         </header>
 
         <section id="section1" css={sectionStyles1}>
@@ -354,8 +631,6 @@ function App() {
             <img src={dashboard} alt="Merchants on its Shopify dashboard" />
           </div>
         </section>
-
-        <section css={grayBackground}></section>
 
         <section id="section2" css={sectionStyles2}>
           <h2>Your email list can net you an extra 10-20% more revenue</h2>
@@ -378,32 +653,35 @@ function App() {
         </section>
 
         <section id="section3" css={sectionStyles3}>
-          <h2>Make email the best asset for your Shopify store</h2>
-          <div css={gridSection3}>
-            <div>
-              <p>
-                Hi, I’m <a href="#1">Jeremy</a>, ecommerce consultant and former
-                marketing specialist at SPOKE, one of the fastest growing
-                consumer businesses in the UK.
-              </p>
-              <p>
-                I help fashion and beauty brands (just like yours!) on Shopify
-                to define and build campaigns with Klaviyo, letting you:
-              </p>
-              <ul>
-                <li>Turn subscribers into paying customers</li>
-                <li>Recover lost sales</li>
-                <li>Retain customers and maximize their LTV</li>
-              </ul>
+          <div css={divSection3}>
+            <h2>Make email the best asset for your Shopify store</h2>
+            <div css={gridSection3}>
+              <div>
+                <p>
+                  Hi, I’m <a href="#1">Jeremy</a>, ecommerce consultant and
+                  former marketing specialist at SPOKE, one of the fastest
+                  growing consumer businesses in the UK.
+                </p>
+                <p>
+                  I help fashion and beauty brands (just like yours!) on Shopify
+                  to define and build campaigns with Klaviyo, letting you:
+                </p>
+                <ul>
+                  <li>Turn subscribers into paying customers</li>
+                  <li>Recover lost sales</li>
+                  <li>Retain customers and maximize their LTV</li>
+                </ul>
+              </div>
+              <div>
+                <img src={jeremy} alt="jeremy" />
+              </div>
             </div>
-            <div>
-              <img src={jeremy} alt="jeremy" />
-            </div>
+            <p>
+              Ultimately, being there whenever your customers need you—so you
+              can build a sustainable business with predictable, repeatable
+              sales.
+            </p>
           </div>
-          <p>
-            Ultimately, being there whenever your customers need you—so you can
-            build a sustainable business with predictable, repeatable sales.
-          </p>
         </section>
         <section id="section4" css={sectionStyles4}>
           <h2>Solutions to step up your email marketing game</h2>
@@ -434,11 +712,11 @@ function App() {
           </div>
         </section>
 
-        <section id="section6">
+        <section id="section5" css={sectionStyles5}>
           <h2>
             These DTC brands on Shopify are now thriving with email marketing
           </h2>
-          <ul>
+          <ul css={logosStyles5}>
             <li>
               <a
                 href="#1"
@@ -446,7 +724,7 @@ function App() {
                 rel="noopener noreferrer"
                 alt="Black Limba"
               >
-                {' '}
+                <img src={blackLimba} alt="black-limba" />
               </a>
             </li>
             <li>
@@ -454,98 +732,100 @@ function App() {
                 href="#1"
                 target="_blank"
                 rel="noopener noreferrer"
-                alt="Black Limba"
+                alt="Spoke"
               >
-                {' '}
+                <img src={spoke} alt="spoke" />
               </a>
-            </li>{' '}
+            </li>
+            <li>
+              <a href="#1" target="_blank" rel="noopener noreferrer" alt="Feel">
+                <img src={feel} alt="feel" />
+              </a>
+            </li>
             <li>
               <a
                 href="#1"
                 target="_blank"
                 rel="noopener noreferrer"
-                alt="Black Limba"
+                alt="Skinspace"
               >
-                {' '}
+                <img src={skinspace} alt="skinspace" />
               </a>
-            </li>{' '}
+            </li>
             <li>
               <a
                 href="#1"
                 target="_blank"
                 rel="noopener noreferrer"
-                alt="Black Limba"
+                alt="Ron Dorff"
               >
-                {' '}
-              </a>
-            </li>{' '}
-            <li>
-              <a
-                href="#1"
-                target="_blank"
-                rel="noopener noreferrer"
-                alt="Black Limba"
-              >
-                {' '}
-              </a>
-            </li>{' '}
-            <li>
-              <a
-                href="#1"
-                target="_blank"
-                rel="noopener noreferrer"
-                alt="Black Limba"
-              >
-                {' '}
-              </a>
-            </li>{' '}
-            <li>
-              <a
-                href="#1"
-                target="_blank"
-                rel="noopener noreferrer"
-                alt="Black Limba"
-              >
-                {' '}
-              </a>
-            </li>{' '}
-            <li>
-              <a
-                href="#1"
-                target="_blank"
-                rel="noopener noreferrer"
-                alt="Black Limba"
-              >
-                {' '}
-              </a>
-            </li>{' '}
-            <li>
-              <a
-                href="#1"
-                target="_blank"
-                rel="noopener noreferrer"
-                alt="Black Limba"
-              >
-                {' '}
-              </a>
-            </li>{' '}
-            <li>
-              <a
-                href="#1"
-                target="_blank"
-                rel="noopener noreferrer"
-                alt="Black Limba"
-              >
-                {' '}
+                <img src={rondorff} alt="rondorff" />
               </a>
             </li>
           </ul>
-          <a href="#1" alt="link">
-            Stg
-          </a>
+          <p />
+          <ul css={logosStyles5}>
+            <li>
+              <a
+                href="#1"
+                target="_blank"
+                rel="noopener noreferrer"
+                alt="Amavii"
+              >
+                <img src={amavii} alt="amavii" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#1"
+                target="_blank"
+                rel="noopener noreferrer"
+                alt="Bonsoirs"
+              >
+                <img src={bonsoirs} alt="bonsoirs" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#1"
+                target="_blank"
+                rel="noopener noreferrer"
+                alt="Bon Parfumeur"
+              >
+                <img src={bonParfumeur} alt="bon-parfumeur" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#1"
+                target="_blank"
+                rel="noopener noreferrer"
+                alt="Ocean bottle"
+              >
+                <img src={oceanBottle} alt="ocean-bottle" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#1"
+                target="_blank"
+                rel="noopener noreferrer"
+                alt="Fifth Origins"
+              >
+                <img src={fifthOrigins} alt="fifth-origins" />
+              </a>
+            </li>
+          </ul>
+          <br />
+          <br />
+          <p>
+            <a href="#1" alt="link" css={ctaLink5}>
+              See examples of work
+            </a>
+          </p>
         </section>
 
-        <section id="section7">
+        <section id="section6" css={sectionStyles6}>
           <h2>A proven track record to drive meaningful ROI through emails</h2>
           <p>
             Delighting your customers is good business. But as an entrepreneur,
@@ -557,7 +837,9 @@ function App() {
             clients in the men’s lifestyle industry generates almost 20% of his
             monthly revenue from the automated email campaigns we’ve created:
           </p>
-          <img src={dashboard} alt="dashboard" />
+          <p>
+            <img src={dashboard2} alt="dashboard" />
+          </p>
           <p>
             By first auditing the current email strategy and learning more about
             shoppers using visitors polls, we were able to build an automated
@@ -573,7 +855,7 @@ function App() {
           <button> </button>
         </section>
 
-        <section id="section8">
+        <section id="section7" css={sectionStyles7}>
           <h2>Get the most out of your email marketing</h2>
           <p>
             30 days from now, you could already be making more sales from your
@@ -591,9 +873,11 @@ function App() {
           </p>
         </section>
 
-        <section id="section9">
+        <section id="section8" css={sectionStyles8}>
           <div>
-            <img src={logo2} alt="dealwithgrowth" />
+            <h3>
+              <img src={logo2} alt="dealwithgrowth" />
+            </h3>
             <p>
               Helping Shopify merchants <br />
               to thrive
@@ -601,44 +885,45 @@ function App() {
           </div>
           <div>
             <h3>Information</h3>
-            <ul>
-              <li>Contact</li>
-              <li>About</li>
-              <li>Privacy policy</li>
-            </ul>
+            <p>Contact</p>
+            <p>About</p>
+            <p>Privacy policy</p>
           </div>
           <div>
             <h3>Partners</h3>
-            <a href="#1" alt="shopify">
-              <img src={shopify} alt="shopify" />
-            </a>
-            <a href="#1" alt="klaviyo">
-              <img src={klaviyo} alt="klaviyo" />
-            </a>
+            <div css={setLogos8}>
+              <a href="#1" alt="shopify">
+                <img src={shopify} alt="shopify" />
+              </a>
+
+              <a href="#1" alt="klaviyo">
+                <img src={klaviyo} alt="klaviyo" />
+              </a>
+            </div>
           </div>
           <div>
             <h3>International</h3>
-            <ul>
-              <li>
-                <a href="#1" alt="">
-                  English Version
-                </a>
-              </li>
-              <li>
-                <a href="#1" alt="">
-                  Version Française
-                </a>
-              </li>
-              <li>
-                <a href="#1" alt="">
-                  Versión Española
-                </a>
-              </li>
-            </ul>
+            <p>
+              <a href="#1" alt="" css={intAnchors8}>
+                English Version
+              </a>
+            </p>
+            <p>
+              <a href="#1" alt="" css={intAnchors8}>
+                Version Française
+              </a>
+            </p>
+            <p>
+              <a href="#1" alt="" css={intAnchors8}>
+                Versión Española
+              </a>
+            </p>
           </div>
+          <br />
+          <br />
         </section>
 
-        <footer>
+        <footer css={footerStyles}>
           <p>
             © 2021 · <a href="/">Dealwithgrowth</a> · Ecommerce consultancy
             powered by{' '}

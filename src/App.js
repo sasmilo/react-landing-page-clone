@@ -25,15 +25,22 @@ const ourGray = '#1d2d35';
 const lightGray = '#f5f5f5';
 const footerGray = '#171727';
 const white = '#fff';
-const paddBott = '100px';
+const paddBott = '80px';
+const parGray = '#283c46';
 
 const headerStyles = css`
   display: flex;
+  justify-content: space-between;
   color: ${ourGray};
-  padding-top: 49px;
-  padding-left: 18px;
+  padding-top: 39px;
+  padding-left: 15px;
   padding-right: 20px;
   padding-bottom: ${paddBott};
+
+  div {
+    display: flex;
+    flex-direction: row;
+  }
 
   p {
     margin-right: auto;
@@ -44,7 +51,10 @@ const headerStyles = css`
   }
 
   img {
-    height: 100%;
+    height: 36px;
+    width: auto;
+    padding-bottom: 25px;
+    padding-left: 15px;
 
     :hover {
       transform: scale(1.1);
@@ -56,10 +66,11 @@ const headerStyles = css`
     color: ${ourGray};
     text-decoration: none;
     display: block;
-    padding: 20px 45px;
+    padding: 10px 18px 0;
+    margin-top: 10 px;
     outline-offset: -1px;
     transition: all 0.2s ease-in-out;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 700;
     letter-spacing: 2px;
     line-height: 1;
@@ -67,42 +78,17 @@ const headerStyles = css`
     background-color: transparent;
     border: 2px solid transparent;
     border-radius: 10px;
-    padding: 10px 0 0 0;
+    font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
 
-    :nth-child(6) {
+    :nth-child(5) {
       border: 2px solid ${purple};
       border-radius: 10px;
-    }
-
-    :nth-child(1) {
-      padding: 0;
+      margin-bottom: 30px;
+      margin-top: 0px;
     }
 
     :hover {
       color: ${purple};
-    }
-
-    button {
-      background-color: transparent;
-      border: solid 1px;
-      padding: 10px 20px;
-      margin-top: 0;
-      border-color: ${purple};
-      border-radius: 10px;
-      color: ${ourGray};
-      text-decoration: none;
-      display: block;
-      outline-offset: -1px;
-      transition: all 0.2s ease-in-out;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      line-height: 1;
-      text-transform: uppercase;
-
-      :hover {
-        color: ${purple};
-      }
     }
   }
 `;
@@ -111,29 +97,42 @@ const headerFlagStyle = css`
   display: inline !important;
   border: none !important;
   box-shadow: none !important;
-  height: 1em !important;
-  width: 1em !important;
+  height: 13px !important;
+  width: 13px !important;
   margin: 0 0.07em !important;
   vertical-align: -0.1em !important;
   background: none !important;
   padding: 0 !important;
+  padding-top: 10px;
+  cursor: pointer;
+`;
+
+const headerParImgStyle = css`
+  margin: 0;
+`;
+
+const headerDiv2 = css`
+  padding-top: 10px;
+  padding-right: 10px;
 `;
 
 const sectionStyles1 = css`
   display: grid;
+  align-items: left;
   grid-template-columns: 1fr 1fr;
-  margin: 0 80px;
+  padding: 0 75px;
   padding-bottom: ${paddBott};
 
   h1 {
     color: ${ourGray};
     font-family: 'Merriweather', 'Helvetica', 'Arial', serif;
-    font-size: 3.2rem;
+    font-size: 3.4rem;
     line-height: 1.2;
     margin-block-start: 0em;
     margin-block-end: 0em;
     letter-spacing: -0.75px;
     display: flex;
+    padding-bottom: 28px;
   }
 
   div {
@@ -147,15 +146,18 @@ const sectionStyles1 = css`
     border-radius: 10px;
     box-shadow: 0 19px 70px 0 rgb(0 0 0 / 12%);
 
-    border: 4px solid ${purple};
+    /* border: 4px solid ${purple}; */
   }
 
   p {
     font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    line-height: 1.35;
+    font-weight: 300;
     display: flex;
     margin-block-start: 0;
     margin-block-end: 0;
+    color: ${parGray};
   }
 
   button {
@@ -163,12 +165,12 @@ const sectionStyles1 = css`
     border-radius: 10px;
     border: none;
     background-color: ${purple};
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #fff;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 1.4px;
     line-height: 1;
-    padding: 22px 36px 20px;
+    padding: 22px 30px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -178,27 +180,43 @@ const sectionStyles1 = css`
   a {
     color: ${ourGray};
     border-bottom: 2px solid ${purple};
+    text-align: bottom;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 2px;
-    padding: 0;
+    padding-bottom: 20;
     cursor: pointer;
+    font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
   }
 `;
 
 const leftDiv1 = css`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 3fr 3fr 1fr;
+  grid-template-rows: 12fr 7fr 4fr;
+  padding-right: 30px;
 `;
 
-const rightDiv1 = css``;
+const rightDiv1 = css`
+  img {
+    position: relative;
+    top: 20px;
+    left: 15px;
+  }
+`;
 
 const btnLinkStyles = css`
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  padding-top: 10px;
+
+  a {
+    padding-top: 22px;
+    padding-bottom: 2px;
+  }
 `;
 
 const sectionStyles2 = css`
@@ -591,27 +609,29 @@ function App() {
         `}
       >
         <header css={headerStyles}>
-          <p>
+          <div>
             <a href="/" alt="logo">
               <img src={logo} alt="dealwithgrowth" />
             </a>
-          </p>
+          </div>
 
-          <a href="#1">Work</a>
+          <div css={headerDiv2}>
+            <a href="#1">Work</a>
 
-          <a href="#1">Why Klaviyo?</a>
+            <a href="#1">Why Klaviyo?</a>
 
-          <a href="#1">Blog</a>
+            <a href="#1">Blog</a>
 
-          <a href="#1">About</a>
+            <a href="#1">About</a>
 
-          <a href="#1">
-            <span>Get in touch</span>
-          </a>
+            <a href="#1">
+              <span>Get in touch</span>
+            </a>
 
-          <p>
-            <img src={usa} alt="usa" css={headerFlagStyle} />
-          </p>
+            <p css={headerParImgStyle}>
+              <img src={usa} alt="usa" css={headerFlagStyle} />
+            </p>
+          </div>
         </header>
 
         <section id="section1" css={sectionStyles1}>
@@ -624,6 +644,7 @@ function App() {
             </p>
             <div css={btnLinkStyles}>
               <button>Find out how</button>
+
               <a href="#1">See examples of work</a>
             </div>
           </div>

@@ -66,7 +66,7 @@ const headerStyles = css`
     color: ${ourGray};
     text-decoration: none;
     display: block;
-    padding: 10px 18px 0;
+    padding: 12px 19px 0;
     margin-top: 10 px;
     outline-offset: -1px;
     transition: all 0.2s ease-in-out;
@@ -107,13 +107,9 @@ const headerFlagStyle = css`
   cursor: pointer;
 `;
 
-const headerParImgStyle = css`
-  margin: 0;
-`;
-
 const headerDiv2 = css`
-  padding-top: 10px;
-  padding-right: 10px;
+  padding-top: 8px;
+  padding-right: 28px;
 `;
 
 const sectionStyles1 = css`
@@ -121,7 +117,14 @@ const sectionStyles1 = css`
   align-items: left;
   grid-template-columns: 1fr 1fr;
   padding: 0 75px;
-  padding-bottom: ${paddBott};
+  padding-bottom: calc(30px + ${paddBott});
+
+  ::before {
+    width: 150px;
+    height: 100px;
+    transform: skewY(-deg);
+    background: red;
+  }
 
   h1 {
     color: ${ourGray};
@@ -145,8 +148,6 @@ const sectionStyles1 = css`
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 19px 70px 0 rgb(0 0 0 / 12%);
-
-    /* border: 4px solid ${purple}; */
   }
 
   p {
@@ -200,6 +201,20 @@ const leftDiv1 = css`
 `;
 
 const rightDiv1 = css`
+  display: inline-block;
+  position: relative;
+
+  ::before {
+    position: absolute;
+    top: 0;
+    left: 35px;
+    width: calc(100% - 10px);
+    height: calc(100% - 50px);
+    border: 4px solid ${purple};
+    border-radius: 10px;
+    content: '';
+  }
+
   img {
     position: relative;
     top: 20px;
@@ -223,75 +238,86 @@ const sectionStyles2 = css`
   padding-right: auto;
   padding-left: auto;
   background-color: ${lightGray};
-  padding-bottom: ${paddBott};
+  padding-bottom: calc(${paddBott} - 40px);
 
   h2 {
     font-family: 'Merriweather', 'Helvetica', 'Arial', serif;
     color: ${ourGray};
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.9rem;
     letter-spacing: -0.75px;
     font-weight: 700;
     line-height: 1.3;
     margin-block-start: 0;
     margin-block-end: 0;
+    padding-bottom: 30px;
   }
 
   p {
     max-width: 760px;
-    color: ${ourGray};
+    color: ${parGray};
     margin-right: auto;
     margin-left: auto;
     font-size: 1.3rem;
-    font-weight: 400;
+    line-height: 1.5;
+    font-weight: 300;
     font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
     margin-block-start: 0;
     margin-block-end: 0;
+    padding-bottom: 30px;
   }
 `;
 
 const sectionStyles3 = css`
   background-color: ${lightGray};
-  width: 100% img {
-    width: 233px;
+  width: 100%;
+  padding-bottom: calc(${paddBott} - 30px);
+
+  img {
+    width: 240px;
     height: auto;
     border-radius: 10px;
-    padding-bottom: ${paddBott};
   }
 
   h2 {
     font-family: 'Merriweather', 'Helvetica', 'Arial', serif;
     color: ${ourGray};
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.9rem;
     letter-spacing: -0.75px;
     font-weight: 700;
     line-height: 1.3;
     margin-block-start: 0;
     margin-block-end: 0;
+    padding-bottom: 25px;
   }
 
   p {
     margin-block-start: 0;
     margin-block-end: 0;
+    padding-bottom: 20px;
   }
 
+  li {
+    padding-bottom: 10px;
+  }
   p,
   li {
     max-width: 760px;
-    color: ${ourGray};
+    color: ${parGray};
     margin-right: auto;
     margin-left: auto;
     font-size: 1.3rem;
-    font-weight: 400;
+    line-height: 1.5;
+    font-weight: 300;
     font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
   }
 `;
 
 const gridSection3 = css`
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  width: 95%;
+  grid-template-columns: 12fr 5fr;
+  width: 100%;
   height: auto;
 `;
 
@@ -310,7 +336,9 @@ const divSection3 = css`
 
 const sectionStyles4 = css`
   background-color: ${lightGray};
-  padding-bottom: ${paddBott};
+  padding-bottom: calc(${paddBott} + 35px);
+  padding-left: 50px;
+  padding-right: 50px;
   h2 {
     max-width: 760px;
     margin-right: auto;
@@ -318,28 +346,34 @@ const sectionStyles4 = css`
     font-family: 'Merriweather', 'Helvetica', 'Arial', serif;
     color: ${ourGray};
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.9rem;
     letter-spacing: -0.75px;
     font-weight: 700;
     line-height: 1.3;
     margin-block-start: 0;
     margin-block-end: 0;
+    padding-bottom: 60px;
   }
 `;
 
 const gridSection4 = css`
   display: grid;
   grid-template-columns: auto auto;
-  width: 95%;
+  grid-gap: 20px;
+  width: 100%;
   height: auto;
 `;
 
 const elementOfGrid4 = css`
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+
   h3 {
     font-family: 'Merriweather', 'Helvetica', 'Arial', serif;
     color: ${ourGray};
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   p {
@@ -347,51 +381,76 @@ const elementOfGrid4 = css`
     margin-right: auto;
     margin-left: auto;
     font-size: 1.3rem;
-    font-weight: 400;
+    line-height: 1.5;
+    font-weight: 300;
     font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
     max-width: 760px;
     margin: 30px 30px 28px;
-    padding: 0;
+    padding-bottom: 30px;
     margin-block-start: 0;
     margin-block-end: 0;
   }
 
   button {
-    border-radius: 10px;
-    border: none;
-    background-color: ${purple};
-    font-size: 1rem;
-    color: #fff;
-    font-weight: 700;
-    letter-spacing: 2px;
-    line-height: 1;
-    padding: 20px 30px 20px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    width: auto;
-    cursor: pointer;
-    margin: auto;
-    display: block;
   }
+`;
+const leftGridButt4 = css`
+  border-radius: 10px;
+  border: none;
+  background-color: ${purple};
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1;
+  padding: 20px 30px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: auto;
+  cursor: pointer;
+  margin: auto;
+  display: block;
+`;
+
+const rightGridButt4 = css`
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1;
+  padding: 20px 30px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: auto;
+  cursor: pointer;
+  margin: auto;
+  display: block;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid ${purple};
+  border-radius: 10px;
+  font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
 `;
 
 const sectionStyles5 = css`
   background-color: ${lightGray};
   padding-bottom: ${paddBott};
   h2 {
-    max-width: 760px;
     margin-right: auto;
     margin-left: auto;
     font-family: 'Merriweather', 'Helvetica', 'Arial', serif;
     color: ${ourGray};
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.9rem;
     letter-spacing: -0.75px;
     font-weight: 700;
     line-height: 1.3;
     margin-block-start: 0;
     margin-block-end: 0;
+    padding-bottom: 20px;
   }
 
   p {
@@ -425,9 +484,12 @@ const logosStyles5 = css`
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
+  line-height: 1.3;
   justify-content: space-between;
   list-style: none;
   margin-left: 0px;
+  padding-left: 60px;
+  padding-right: 60px;
 
   img {
     height: 20px;
@@ -439,30 +501,33 @@ const sectionStyles6 = css`
   padding-right: auto;
   padding-left: auto;
   background-color: ${lightGray};
-  padding-bottom: ${paddBott};
+  padding-bottom: calc(${paddBott} - 40px);
 
   h2 {
     font-family: 'Merriweather', 'Helvetica', 'Arial', serif;
     color: ${ourGray};
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.9rem;
     letter-spacing: -0.75px;
     font-weight: 700;
     line-height: 1.3;
     margin-block-start: 0;
     margin-block-end: 0;
+    padding-bottom: 30px;
   }
 
   p {
     max-width: 760px;
-    color: ${ourGray};
+    color: ${parGray};
     margin-right: auto;
     margin-left: auto;
+    line-height: 1.5;
     font-size: 1.3rem;
-    font-weight: 400;
+    font-weight: 300;
     font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
     margin-block-start: 0;
     margin-block-end: 0;
+    padding-bottom: 30px;
   }
 
   img {
@@ -471,18 +536,24 @@ const sectionStyles6 = css`
   }
 `;
 
+const smallLine6 = css`
+  width: 50px;
+  border-bottom: 2px solid ${purple};
+`;
+
 const sectionStyles7 = css`
-  padding-bottom: ${paddBott};
+  padding-bottom: calc(${paddBott} - 70px);
   h2 {
     font-family: 'Merriweather', 'Helvetica', 'Arial', serif;
     color: ${ourGray};
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.9rem;
     letter-spacing: -0.75px;
     font-weight: 700;
     line-height: 1.3;
     margin-block-start: 0;
     margin-block-end: 0;
+    padding-bottom: 30px;
   }
 
   p {
@@ -491,11 +562,13 @@ const sectionStyles7 = css`
     margin-right: auto;
     margin-left: auto;
     font-size: 1.3rem;
-    font-weight: 400;
+    line-height: 1.5;
+    font-weight: 300;
     font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
     text-align: center;
     margin-block-start: 0;
     margin-block-end: 0;
+    padding-bottom: 30px;
   }
 
   button {
@@ -521,10 +594,11 @@ const sectionStyles7 = css`
 const sectionStyles8 = css`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 3rem 0 0;
   background: ${footerGray};
   color: ${white};
+  padding-top: 3rem;
   padding-left: 50px;
+  padding-bottom: calc(${paddBott} - 80px);
 
   h3 {
     font-family: 'Merriweather', 'Helvetica', 'Arial', serif;
@@ -606,6 +680,17 @@ function App() {
           margin: 0;
           padding: 0;
           z-index: -1;
+
+          /* ::before {
+            background-color: #f5f5f5;
+            content: '';
+            height: 150%;
+            transform: skewY(-5deg);
+            position: absolute;
+            top: -240px;
+            width: 100%;
+            z-index: -1;
+          } */
         `}
       >
         <header css={headerStyles}>
@@ -628,9 +713,9 @@ function App() {
               <span>Get in touch</span>
             </a>
 
-            <p css={headerParImgStyle}>
+            <a href="#1">
               <img src={usa} alt="usa" css={headerFlagStyle} />
-            </p>
+            </a>
           </div>
         </header>
 
@@ -662,13 +747,15 @@ function App() {
           </p>
           <p>
             Meanwhile, brands like Harry’s, Chubbies and Thirdlove are nailing
-            me while building long-term customer relationships.But y any of what
-            they’re doing to your our plate trying to hit yet another sales
-            target next month.
+            their email game while building long-term customer relationships.But
+            you can’t figure out how to apply any of what they’re doing to your
+            business. Especially when you’ve got so much on your plate trying to
+            hit yet another sales target next month.
           </p>
           <p>
             So, how do you make it all happen? How do you ensure you only send
-            rs buying again & again?
+            relevant emails at the right time, to get your customers buying
+            again & again?
           </p>
           <p>Well, you don’t have to—because I’m here to do it all for you.</p>
         </section>
@@ -685,7 +772,8 @@ function App() {
                 </p>
                 <p>
                   I help fashion and beauty brands (just like yours!) on Shopify
-                  to define and build campaigns with Klaviyo, letting you:
+                  to define and build captivating email campaigns with Klaviyo,
+                  letting you:
                 </p>
                 <ul>
                   <li>Turn subscribers into paying customers</li>
@@ -717,7 +805,7 @@ function App() {
                 strategies that will increase engagement and start generating
                 sales right away.
               </p>
-              <button>Get in touch</button>
+              <button css={leftGridButt4}>Get in touch</button>
             </div>
             <div css={elementOfGrid4}>
               <h3>Done for you Klaviyo email automation</h3>
@@ -728,7 +816,7 @@ function App() {
                 campaigns designed to delight your customers and send your LTV
                 through the ceiling.
               </p>
-              <button>Are we a match?</button>
+              <button css={rightGridButt4}>Are we a match?</button>
             </div>
           </div>
         </section>
@@ -873,7 +961,7 @@ function App() {
             sure they’re a valued part of the community.
           </p>
           <p>Want me to do the same for you?</p>
-          <button> </button>
+          <p css={smallLine6} />
         </section>
 
         <section id="section7" css={sectionStyles7}>
@@ -885,6 +973,7 @@ function App() {
             LTV through the ceiling.
           </p>
           <button>Let's talk email </button>
+          <br />
           <p>
             Not ready to get in touch yet?{' '}
             <a href="#1" alt="link33">
@@ -940,8 +1029,6 @@ function App() {
               </a>
             </p>
           </div>
-          <br />
-          <br />
         </section>
 
         <footer css={footerStyles}>

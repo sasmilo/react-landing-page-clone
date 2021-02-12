@@ -112,19 +112,24 @@ const headerDiv2 = css`
   padding-right: 28px;
 `;
 
+const backgrdStyles1 = css`
+  ::before {
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    clip-path: polygon(0% 100%, 0% 25%, 100% 17%, 100% 100%);
+    background: ${lightGray};
+    content: '';
+    z-index: -1;
+  }
+`;
+
 const sectionStyles1 = css`
   display: grid;
   align-items: left;
   grid-template-columns: 1fr 1fr;
   padding: 0 75px;
   padding-bottom: calc(30px + ${paddBott});
-
-  ::before {
-    width: 150px;
-    height: 100px;
-    transform: skewY(-deg);
-    background: red;
-  }
 
   h1 {
     color: ${ourGray};
@@ -198,6 +203,7 @@ const leftDiv1 = css`
   grid-template-columns: 1fr;
   grid-template-rows: 12fr 7fr 4fr;
   padding-right: 30px;
+  z-index: 2;
 `;
 
 const rightDiv1 = css`
@@ -277,6 +283,7 @@ const sectionStyles3 = css`
     width: 240px;
     height: auto;
     border-radius: 10px;
+    box-shadow: 0 19px 70px 0 rgb(0 0 0 / 12%);
   }
 
   h2 {
@@ -411,6 +418,7 @@ const leftGridButt4 = css`
   cursor: pointer;
   margin: auto;
   display: block;
+  box-shadow: 0 7px 16px 0 rgb(0 0 0 / 20%);
 `;
 
 const rightGridButt4 = css`
@@ -497,12 +505,23 @@ const logosStyles5 = css`
   }
 `;
 
+const backgrdStyles6 = css`
+  ::before {
+    position: absolute;
+    width: 100%;
+    height: 180%;
+    clip-path: polygon(0% 0%, 0% 87%, 100% 77%, 100% 0%);
+    background: ${lightGray};
+    content: '';
+    z-index: -1;
+  }
+`;
+
 const sectionStyles6 = css`
   padding-right: auto;
   padding-left: auto;
-  background-color: ${lightGray};
   padding-bottom: calc(${paddBott} - 40px);
-
+  z-index: 2;
   h2 {
     font-family: 'Merriweather', 'Helvetica', 'Arial', serif;
     color: ${ourGray};
@@ -514,6 +533,7 @@ const sectionStyles6 = css`
     margin-block-start: 0;
     margin-block-end: 0;
     padding-bottom: 30px;
+    z-index: 2;
   }
 
   p {
@@ -528,11 +548,14 @@ const sectionStyles6 = css`
     margin-block-start: 0;
     margin-block-end: 0;
     padding-bottom: 30px;
+    z-index: 2;
   }
 
   img {
     width: 100%;
     height: auto;
+    z-index: 2;
+    box-shadow: 0 19px 70px 0 rgb(0 0 0 / 12%);
   }
 `;
 
@@ -588,6 +611,7 @@ const sectionStyles7 = css`
     cursor: pointer;
     margin: auto;
     display: block;
+    box-shadow: 0 7px 16px 0 rgb(0 0 0 / 20%);
   }
 `;
 
@@ -676,21 +700,10 @@ function App() {
     <div>
       <div
         css={css`
-          background: #fff;
+          background: transparent;
           margin: 0;
           padding: 0;
           z-index: -1;
-
-          /* ::before {
-            background-color: #f5f5f5;
-            content: '';
-            height: 150%;
-            transform: skewY(-5deg);
-            position: absolute;
-            top: -240px;
-            width: 100%;
-            z-index: -1;
-          } */
         `}
       >
         <header css={headerStyles}>
@@ -719,22 +732,25 @@ function App() {
           </div>
         </header>
 
-        <section id="section1" css={sectionStyles1}>
-          <div css={leftDiv1}>
-            <h1>Email campaigns that run your entire Shopify store</h1>
-            <p>
-              We define & execute sophisticated email strategies that delight
-              customers—so you can drive a steady stream of revenue and repeat
-              purchases to your store without relying on aggressive discounting.
-            </p>
-            <div css={btnLinkStyles}>
-              <button>Find out how</button>
+        <section id="section1" css={backgrdStyles1}>
+          <div css={sectionStyles1}>
+            <div css={leftDiv1}>
+              <h1>Email campaigns that run your entire Shopify store</h1>
+              <p>
+                We define & execute sophisticated email strategies that delight
+                customers—so you can drive a steady stream of revenue and repeat
+                purchases to your store without relying on aggressive
+                discounting.
+              </p>
+              <div css={btnLinkStyles}>
+                <button>Find out how</button>
 
-              <a href="#1">See examples of work</a>
+                <a href="#1">See examples of work</a>
+              </div>
             </div>
-          </div>
-          <div css={rightDiv1}>
-            <img src={dashboard} alt="Merchants on its Shopify dashboard" />
+            <div css={rightDiv1}>
+              <img src={dashboard} alt="Merchants on its Shopify dashboard" />
+            </div>
           </div>
         </section>
 
@@ -935,33 +951,39 @@ function App() {
         </section>
 
         <section id="section6" css={sectionStyles6}>
-          <h2>A proven track record to drive meaningful ROI through emails</h2>
-          <p>
-            Delighting your customers is good business. But as an entrepreneur,
-            you care about the hard, cold numbers. The kind of numbers you can
-            take to the bank.
-          </p>
-          <p>
-            So here’s a typical example of what you can expect: one of my
-            clients in the men’s lifestyle industry generates almost 20% of his
-            monthly revenue from the automated email campaigns we’ve created:
-          </p>
-          <p>
-            <img src={dashboard2} alt="dashboard" />
-          </p>
-          <p>
-            By first auditing the current email strategy and learning more about
-            shoppers using visitors polls, we were able to build an automated
-            personalized customer experience for all stages of the funnel.
-          </p>
-          <p>
-            Combined with segmented newsletters, his email channel now accounts
-            for more than 30% of his monthly sales, while creating lasting
-            relationships with customers, respecting their inboxes and making
-            sure they’re a valued part of the community.
-          </p>
-          <p>Want me to do the same for you?</p>
-          <p css={smallLine6} />
+          <div css={backgrdStyles6}>
+            <h2>
+              A proven track record to drive meaningful ROI through emails
+            </h2>
+            <p>
+              Delighting your customers is good business. But as an
+              entrepreneur, you care about the hard, cold numbers. The kind of
+              numbers you can take to the bank.
+            </p>
+            <p>
+              So here’s a typical example of what you can expect: one of my
+              clients in the men’s lifestyle industry generates almost 20% of
+              his monthly revenue from the automated email campaigns we’ve
+              created:
+            </p>
+            <p>
+              <img src={dashboard2} alt="dashboard" />
+            </p>
+            <p>
+              By first auditing the current email strategy and learning more
+              about shoppers using visitors polls, we were able to build an
+              automated personalized customer experience for all stages of the
+              funnel.
+            </p>
+            <p>
+              Combined with segmented newsletters, his email channel now
+              accounts for more than 30% of his monthly sales, while creating
+              lasting relationships with customers, respecting their inboxes and
+              making sure they’re a valued part of the community.
+            </p>
+            <p>Want me to do the same for you?</p>
+            <p css={smallLine6} />
+          </div>
         </section>
 
         <section id="section7" css={sectionStyles7}>
